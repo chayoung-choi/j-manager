@@ -1,8 +1,6 @@
 import React from "react";
 import Spreadsheet from "react-spreadsheet";
-import Tabletop from "tabletop";
 import { GoogleSpreadsheet } from "google-spreadsheet";
-import { useAsync } from "react-async"
 const config = require('../config/spreadsheet-config.json');
 const CLIENT_EMAIL = config.client_email;
 const PRIVATE_KEY = config.private_key;
