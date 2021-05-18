@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Spreadsheet from "react-spreadsheet";
 import {GoogleSpreadsheet} from "google-spreadsheet";
 import {Box, Button, Container} from "@material-ui/core";
+import Loading from "../common/Loading";
 
 const config = require('../config/spreadsheet-config.json');
 const CLIENT_EMAIL = config.client_email;
@@ -12,13 +13,16 @@ const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 export default function SheetComponent() {
     useEffect(() => {
         console.log('컴포넌트가 화면에 나타남');
+        setLoading(true);
         getSheetData().then(r => console.log("완료"));
+        setLoading(false);
         return () => {
             console.log('컴포넌트가 화면에서 사라짐');
         };
     }, []);
 
     const [sheetData, setSheetData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const getSheetData = async () => {
         try {
@@ -37,9 +41,12 @@ export default function SheetComponent() {
     };
 
     return (
-        <Container maxWidth="md">
-            <Spreadsheet data={sheetData}/>
-        </Container>
+        <>
+            <Container maxWidth="md">
+                <Spreadsheet data={sheetData}/>
+            </Container>
+            <Loading loading={loading}/>
+        </>
     );
 }
 
