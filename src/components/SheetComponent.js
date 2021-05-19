@@ -22,7 +22,7 @@ export default function SheetComponent() {
     }, []);
 
     const [sheetData, setSheetData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const getSheetData = async () => {
         try {
@@ -31,9 +31,11 @@ export default function SheetComponent() {
                 private_key: PRIVATE_KEY,
             });
             await doc.loadInfo();
-            console.log(doc.title);
+            console.log("[doc.title]", doc.title);
             const sheet = doc.sheetsByIndex[0];
-            console.log(sheet);
+            const rows = await sheet.getRows();
+            console.log("[rows]", rows);
+            setSheetData(rows);
 
         } catch (e) {
             console.error('Error: ', e);

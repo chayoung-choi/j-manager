@@ -7,9 +7,34 @@ const PRIVATE_KEY = config.private_key;
 const SPREADSHEET_ID = config.spreadsheet_id;
 // const SHEET_ID = process.env.REACT_APP_SHEET_ID;
 
+const RangeView = ({ cell }) => (
+    <input
+        type="range"
+        value={cell.value}
+        disabled
+        style={{ pointerEvents: "none" }}
+    />
+);
+
+const RangeEdit = ({ cell, onChange }) => (
+    <input
+        type="range"
+        onChange={(e) => {
+            onChange({ ...cell, value: e.target.value });
+        }}
+        value={cell.value || 0}
+        autoFocus
+    />
+);
+
 const data = [
-    [{value: "Vanilla"}, {value: "Chocolate"}],
-    [{value: "Strawberry"}, {value: "Cookies"}],
+    [{ t: "Flavors" }, {t: 1} , {}],
+    [({ value: "Vanilla" }, { value: "Chocolate" })],
+    [{ value: "Strawberry" }, { value: "Cookies" }],
+    [
+        { value: "How much do you like ice cream?" },
+        { value: 100, DataViewer: RangeView, DataEditor: RangeEdit },
+    ],
 ];
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 const SpreadsheetComponent = () => <Spreadsheet data={data}/>;
