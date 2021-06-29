@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default () => {
+const Dashboard = () => {
 
     return (
         <>
@@ -8,3 +8,4 @@ export default () => {
         </>
     );
 }
+export default Dashboard;

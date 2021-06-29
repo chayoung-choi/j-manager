@@ -2,7 +2,7 @@ import {lazy} from 'react'
 
 const AppRoutes = [
     {
-        path: '/',
+        path: ['/', '/j-manager'],
         exact: true,
         component: lazy(() => import('src/views/Home'))
     },

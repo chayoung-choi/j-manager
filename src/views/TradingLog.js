@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default () => {
+const TradingLog = () => {
 
     return (
         <>
@@ -8,3 +8,4 @@ export default () => {
         </>
     );
 }
+export default TradingLog;
