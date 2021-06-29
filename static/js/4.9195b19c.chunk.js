@@ -1,2 +1,2 @@
 (this["webpackJsonpj-manager"]=this["webpackJsonpj-manager"]||[]).push([[4],{142:function(e,n,t){"use strict";t.r(n);t(0);var a=t(3);n.default=function(){return Object(a.jsx)(a.Fragment,{children:"Home"})}}}]);
-//# sourceMappingURL=4.4bcf7219.chunk.js.map
+//# sourceMappingURL=4.9195b19c.chunk.js.map

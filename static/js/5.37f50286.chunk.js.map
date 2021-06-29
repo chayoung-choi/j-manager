@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/TradingLog.js"],"names":["TradingLog"],"mappings":"8GAAA,uBAUeA,UARI,WAEf,OACI","file":"static/js/5.37f50286.chunk.js","sourcesContent":["import React from 'react';\n\nconst TradingLog = () => {\n\n    return (\n        <>\n            TradingLog\n        </>\n    );\n}\nexport default TradingLog;"],"sourceRoot":""}

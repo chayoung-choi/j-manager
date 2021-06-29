@@ -1,1 +1,0 @@
-{"version":3,"sources":["views/TradingLog.js"],"names":[],"mappings":"8GAAA,uBAEe,qBAEX,OACI","file":"static/js/5.d3411267.chunk.js","sourcesContent":["import React from 'react';\n\nexport default () => {\n\n    return (\n        <>\n            TradingLog\n        </>\n    );\n}"],"sourceRoot":""}

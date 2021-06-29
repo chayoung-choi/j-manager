@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/Home.js"],"names":["Home"],"mappings":"8GAAA,uBAUeA,UARF,WAET,OACI","file":"static/js/4.9195b19c.chunk.js","sourcesContent":["import React from 'react';\n\nconst Home = () => {\n\n    return (\n        <>\n            Home\n        </>\n    );\n}\nexport default Home;"],"sourceRoot":""}
