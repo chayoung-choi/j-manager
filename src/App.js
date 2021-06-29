@@ -1,20 +1,21 @@
 import React from "react";
-import {HashRouter, Route} from "react-router-dom";
-import Navigation from "./layout/Navigation";
-import Home from "./routes/Home";
-import Sheet from "./routes/Sheet";
+import {BrowserRouter, HashRouter, Route} from "react-router-dom";
 import "./App.css";
-import Navigation2 from "./layout/Navigation2";
+import {ThemeProvider} from "@material-ui/core/styles";
+import Theme from "./config/Theme";
+import {CssBaseline} from "@material-ui/core";
+import MainLayout from "./layout/MainLayout";
+
+const theme = Theme;
 
 function App() {
     return (
-        <div className="App">
-            <HashRouter>
-                <Navigation2/>
-                <Route path="/" exact={true} component={Home}/>
-                <Route path="/sheet" exact={true} component={Sheet}/>
-            </HashRouter>
-        </div>
+        <ThemeProvider theme={theme}>
+            <CssBaseline/>
+            <BrowserRouter>
+                <MainLayout/>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
 
