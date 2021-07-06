@@ -19,6 +19,10 @@
     "react-scripts": "4.0.3",
     "react-spinners": "^0.10.6",
     "react-spreadsheet": "^0.5.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
     "tabletop": "^1.6.3",
     "web-vitals": "^1.0.1"
   },
